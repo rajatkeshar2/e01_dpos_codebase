@@ -37,7 +37,7 @@ nvm install v8
 node --version
 
 # git clone sourece code
-git clone https://github.com/salinsunny2/BlockchainCodebase && cd BlockchainCodebase && chmod u+x blockchain_manager.bash
+git clone https://github.com/rajatkeshar2/e01_dops_codebase && cd e01_dops_codebase && chmod u+x blockchain_manager.bash
 
 # Install node packages
 npm install
@@ -60,25 +60,12 @@ npm run build
 gulp build-test #This make the front-end files in public dir.
 ```
 
-## Installation on docker.
-
-[Please install Docker firstly](https://store.docker.com/search?offering=community&type=edition)
-
-```
-# pull BlockchainCodebase code docker image
-docker pull saslinsunny2/BlockchainCodebase:v1.3.0
-# run docker and BlockchainCodebase
-docker run -i -t --name BlockchainCodebase1.3.0 -p 9305:9305 salinsunny2/BlockchainCodebase:v1.3.0 /bin/bash
-root@e149b6732a48:/# cd /data/BlockchainCodebase && ./blockchain_manager.bash start
-Blockchain server started as daemon ...
-```
-
 ## Run
 
 ```
-cd BlockchainCodebase && node app.js -c config.json
+cd e01_dops_codebase && node app.js -c config.json
 or
-cd BlockchainCodebase && ./blockchain_manager.bash start
+cd e01_dops_codebase && ./blockchain_manager.bash start
 ```
 Then you can open ```http://localhost:9305``` in you browser.
 
@@ -134,5 +121,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-[Saffron-explorer]:https://explorer.saffron.io/
