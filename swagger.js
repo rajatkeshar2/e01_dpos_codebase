@@ -1,5 +1,7 @@
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
+const config = require('./config.json');
+
 const fs = require('fs');
 
 module.exports = {
@@ -16,7 +18,7 @@ module.exports = {
             servers: [
                 {
                     "description": "REST API For Public Blockchain",
-                    "url": "http://0.0.0.0:9305/api/"
+                    "url": `http://${config.publicIp}:${config.port}/api/`
                 }
             ],
             info: {
@@ -24,7 +26,7 @@ module.exports = {
                 version: '1.0.0', // Version of the app
                 description: 'This is the REST API for public blockchain', // short description of the app
             },
-            host: '0.0.0.0:9305', // the host or url of the app
+            host: `${config.publicIp}:${config.port}`, // the host or url of the app
             basePath: '/api/', // the basepath of your endpoint
             schemes: [
                 "http",
