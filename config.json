@@ -1,7 +1,7 @@
 {
   "port": 9305,
   "address": "0.0.0.0",
-  "publicIp": "192.168.11.108",
+  "publicIp": "192.168.11.123",
   "logLevel": "debug",
   "magic": "594fe0f3",
   "api": {
