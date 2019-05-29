@@ -21,6 +21,7 @@ module.exports = {
   blockIntervalTime: 10,
   activeDelegates: 101,
   defaultCurrency: 'DEFAULT',
+  addressPrefix: 'E',
   fees: {
     send: 0.1,
     secondsignature: 5,

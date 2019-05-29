@@ -1,7 +1,7 @@
 var crypto = require('crypto')
 var base58check = require('./base58check')
-
-const NORMAL_PREFIX = 'A' // A
+const constants = require('./constants');
+const NORMAL_PREFIX = constants.addressPrefix // E
 
 module.exports = {
   isAddress: function (address) {
@@ -15,7 +15,7 @@ module.exports = {
       if (!base58check.decodeUnsafe(address.slice(1))) {
         return false
       }
-      if (['A'].indexOf(address[0]) == -1) {
+      if (NORMAL_PREFIX.indexOf(address[0]) == -1) {
         return false
       }
     }
@@ -29,7 +29,7 @@ module.exports = {
     if (!base58check.decodeUnsafe(address.slice(1))) {
       return false
     }
-    if (['A'].indexOf(address[0]) == -1) {
+    if (NORMAL_PREFIX.indexOf(address[0]) == -1) {
       return false
     }
     return true
