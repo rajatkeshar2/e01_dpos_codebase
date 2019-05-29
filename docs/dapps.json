@@ -873,7 +873,7 @@
 				}
 			}
 		},
-		"/dapps/{id}/accounts/balance": {
+		"/dapps/{id}/accounts/{address}": {
 			"get": {
 				"tags": [
 					"Applications Controller"
@@ -895,7 +895,7 @@
 						}
 					},
 					{
-						"in": "query",
+						"in": "path",
 						"name": "address",
 						"required": true,
 						"schema": {
